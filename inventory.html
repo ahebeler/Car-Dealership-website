@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Andrew's Auto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="AAinventory.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+  </head>
+  <body>
+<header>
+  <a class="headerlogo" href="home.html">
+      <img src="/Users/andrewhebeler/Documents/Car Dealership website/Auto Logo" width="200" height="80">
+  <nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Andrew's Auto</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="home.html">Home</a></li>
+    <li><a href="inventory.html">Inventory</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</div>
+</nav>
+<form>
+  <div>
+
+    <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search our inventory" title="Search Cars">
+    <ul id="myUL">
+  <li><a href="inventory.html">Camry</a></li>
+  <li><a href="inventory.html">Accord</a></li>
+
+  <li><a href="inventory.html">Sonata</a></li>
+  <li><a href="inventory.html">Jetta</a></li>
+
+  <li><a href="inventory.html">Altima</a></li>
+
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    var $block = $('.no-results');
+    $("myInput").keyup(function() {
+        var val = $(this).val();
+        var isMatch = false;
+
+        $("myUL").each(function(i) {
+            var content = $(this).html();
+            if(content.toLowerCase().indexOf(val) == -1) {
+               $(this).hide();
+
+            } else {
+                isMatch = true;
+                $(this).show();
+
+            }
+        });
+
+        $block.toggle(!isMatch);
+    });
+    if(input.value.length == 0){
+        ul.style.display = "none";
+        return;
+    }else{
+        ul.style.display = "hide";
+    }
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "hide";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+  </div>
+</form>
+<div class="row">
+ <div class="col-sm-4" </div>
+ <div class="col-sm-4" </div>
+<div class="col-sm-4" </div>
+</div>
+</div>
+</header>
+<h1>Our Inventory</h1>
+<div class="container">
+  <h2>Shop these cars</h2>
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <img src="https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2018/camry/3T3/2.png?q=85&fm=jpg&w=1024&fit=max&cs=strip&bg=fff" alt="Camry" style="width:100%;" height="80%;">
+        <div class="carousel-caption d-none d-md-block">
+    <h5>Camry</h5>
+    <p>Competitive pricing on 2018 Camry!</p>
+  </div>
+      </div>
+
+      <div class="item">
+        <img src="https://blogmedia.dealerfire.com/wp-content/uploads/sites/618/2016/09/2017-Honda-Accord-Hybrid-AA_o-e1473342753599-1024x387.jpg" alt="Accord" style="width:90%;">
+        <div class="carousel-caption d-none d-md-block">
+    <h5>Accord</h5>
+    <p>Great deals on all new Accords!</p>
+  </div>
+      </div>
+
+      <div class="item">
+        <img src="https://o.aolcdn.com/images/dims3/GLOB/crop/1920x1080+0+0/resize/800x450!/format/jpg/quality/85/http://o.aolcdn.com/hss/storage/midas/8ead6c7eaba005fdcb8b0c56a82bacbd/205158571/01-2018-hyundai-sonata-ny.jpg" alt="Sonata" style="width:100%;">
+        <div class="carousel-caption d-none d-md-block">
+    <h5>Sonata</h5>
+    <p>Best price around on Sonata </p>
+  </div>
+      </div>
+      <div class="item">
+        <img src="https://blogmedia.dealerfire.com/wp-content/uploads/sites/228/2016/09/2017-Volkswagen-Passat-AA_o-e1473716182159-1024x387.jpg" alt="Jetta" style="width:100%;">
+        <div class="carousel-caption d-none d-md-block">
+    <h5>Jetta</h5>
+    <p>Come see the new Jetta in person</p>
+  </div>
+      </div>
+      <div class="item">
+        <img src="https://blogmedia.dealerfire.com/wp-content/uploads/sites/310/2016/12/2017-Nissan-Altima-A_o-e1482277272455-1024x387.jpg" alt="Altima" style="width:100%;">
+        <div class="carousel-caption d-none d-md-block">
+    <h5>Altima</h5>
+    <p>Sleek new design on the all new Altima</p>
+  </div>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<div class="text">
+<br>
+<ul>Camry starting at $25,000 MSRP</ul>
+<script>
+function camryTax() {
+    var a = 25000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("Camry").innerHTML = x;
+}
+</script>
+<button onclick="camryTax()">Calculate Tax</button>
+
+<p id="Camry"></p>
+
+<!-- <script>
+function myFunction(camry) {
+    var a = 25000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("tax").innerHTML = x;
+}
+</script> -->
+<img src="https://www.toyota.com/imgix/responsive/images/mlp/colorizer/2018/camry/3T3/2.png?q=85&fm=jpg&w=1024&fit=max&cs=strip&bg=fff" width="400" height="200">
+<br>
+<br>
+<ul>Accord Starting at $23,000 MSRP</ul>
+<script>
+function accordTax() {
+    var a = 23000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("Accord").innerHTML = x;
+}
+</script>
+<button onclick="accordTax()">Calculate Tax</button>
+
+<p id="Accord"></p>
+
+<!-- <script>
+function accordTax() {
+    var a = 23000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("tax").innerHTML = x;
+}
+</script> -->
+<img src="https://media.ed.edmunds-media.com/honda/accord/2017/oem/2017_honda_accord_sedan_touring-v-6_fq_oem_6_1280.jpg" width="400" height="300">
+<br>
+<br>
+<ul>Sonata starting at $21,000 MSRP</ul>
+<button onclick="sonataTax()">Calculate Tax</button>
+
+<p id="Sonata"></p>
+
+<script>
+function sonataTax() {
+    var a = 21000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("Sonata").innerHTML = x;
+}
+</script>
+<img src="https://www.hyundaiusa.com/images/vehicles/pages/vlp/2018/sonata/vlp/compare-jellies/2018-sonata-limited-20t-symphony-silver.jpg">
+<br>
+<br>
+<ul>Jetta from $22,000 MSRP</ul>
+<button onclick="jettaTax()">Calculate Tax</button>
+
+<p id="Jetta"></p>
+
+<script>
+function jettaTax() {
+    var a = 22000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("Jetta").innerHTML = x;
+}
+</script>
+<img src="http://images.nadaguides.com/Models/400x200/2018-Volkswagen-Jetta-1-4TS.jpg" alt="">
+<br>
+<br>
+<ul>Altima starting at $19,000 MSRP</ul>
+<button onclick="altimaTax()">Calculate Tax</button>
+
+<p id="Altima"></p>
+
+<script>
+function altimaTax() {
+    var a = 19000
+    var b = 1.08
+    var x = a * b
+
+document.getElementById("Altima").innerHTML = x;
+}
+</script>
+<img src="http://images.nadaguides.com/Models/640x480/2018-Nissan-Altima-2-5SL.jpg" alt="" width="400" height="300">
+</div>
+  </body>
+</html>

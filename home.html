@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Andrew's Auto</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="AAHome.css" type="text/css"></link>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+  </head>
+  <body>
+<header>
+  <a class="headerlogo" href="home.html">
+      <img src="/Users/andrewhebeler/Documents/Car Dealership website/Auto Logo" width="200" height="80">
+  <nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">Andrew's Auto</a>
+  </div>
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="home.html">Home</a></li>
+    <li><a href="inventory.html">Inventory</a></li>
+    <li><a href="About.html">About</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+  </ul>
+</div>
+</nav>
+<form>
+  <div>
+    <!-- <input type="search" class="searchbox" placeholder="Search Andrew's Auto" /> -->
+    <!-- <button>Search</button> -->
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search our inventory" title="Search Cars">
+    <ul id="myUL">
+  <li><a href="inventory.html">Camry</a></li>
+  <li><a href="inventory.html">Accord</a></li>
+
+  <li><a href="inventory.html">Sonata</a></li>
+  <li><a href="inventory.html">Jetta</a></li>
+
+  <li><a href="inventory.html">Altima</a></li>
+
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    if(input.value.length == 0){
+        ul.style.display = "none";
+        return;
+    }else{
+        ul.style.display = "block";
+    }
+
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+
+        }
+    }
+}
+</script>
+
+  </div>
+</form>
+<div class="row">
+ <div class="col-sm-4" </div>
+ <div class="col-sm-4" </div>
+<div class="col-sm-4" </div>
+</div>
+</div>
+</header><br>
+<p>Welcome to Andrew's Auto! (A division of USAuto). Click the video below for information on our current deal!</p>
+<h4>Video</h4>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/jV56vJgrOTg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+<span class="btn-mini">Video courtesy of
+    <a href="https://www.youtube.com/watch?v=jV56vJgrOTg"</a> USAuto</span>
+<hr />
+  </body>
+</html>
